@@ -1,0 +1,38 @@
+[package]
+name = "crosscurses"
+description = """
+crosscurses is a curses libary for Rust that supports both Unix and Windows
+platforms by abstracting away the backend that it uses
+(ncurses-rs and pdcurses-sys respectively).
+"""
+homepage = "https://github.com/TimonPost/crosscurses"
+documentation = "https://docs.rs/crosscurses"
+repository = "https://github.com/TimonPost/crosscurses"
+readme = "README.md"
+license = "MIT"
+keywords = ["crosscurses", "curses", "ncurses", "pdcurses"]
+version = "0.1.0"
+authors = ["Ilkka Halila <ilkka@hali.la>", "T.Post"]
+
+[lib]
+name = "crosscurses"
+
+[dependencies]
+log = "0.4"
+libc = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+pdcurses-sys = "0.7"
+winreg = "0.6.2"
+[target.'cfg(unix)'.dependencies]
+ncurses = "5.99.0"
+
+[dev-dependencies]
+rand = "0.7.2"
+
+[features]
+wide = ["ncurses/wide"]
+win32 = ["pdcurses-sys/win32"]
+win32a = ["pdcurses-sys/win32a"]
+show_menu = []
+disable_resize = []
