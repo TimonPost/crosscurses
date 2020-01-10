@@ -174,7 +174,4 @@ Licensed under the MIT license, see [LICENSE.md](LICENSE.md)
 [docs-badge]: https://docs.rs/crosscurses/badge.svg
 [docs-link]: https://docs.rs/crosscurses/
 
-[discord-badge]: https://img.shields.io/discord/560857607196377088.svg?logo=discord
-[discord-link]: https://discord.gg/K4nyTDB
-
 [loc-badge]: https://tokei.rs/b1/github/TimonPost/crosscurses?category=code
